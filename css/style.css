@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    margin: 50px auto;
+}
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 500px;
+    height: 23px;
+    position: relative;
+    transition: .5s;
+}
+span{
+    border-bottom: 3px solid aqua;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    left: 0;
+    z-index: 5;
+    transition: .75s
+}
+form{
+    position: relative;
+}
+label{
+    position: absolute;
+    transition: .5s;
+    left: 10px;
+}
+input:focus{
+    outline: none;
+}
+input:focus ~ span{
+    width: 100%;
+}
+input:focus ~ label{
+    top: -13px;
+    font-size: 15px;
+    color: aqua;
+}
+input:valid ~ label{
+    top: -13px;
+    font-size: 15px;
+    color: aqua;
+}
+input:valid ~ span{
+    width: 100%;
+}
